@@ -6,7 +6,7 @@
 /*   By: gmachado <gmachado@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 01:50:44 by gmachado          #+#    #+#             */
-/*   Updated: 2024/02/28 22:31:05 by gmachado         ###   ########.fr       */
+/*   Updated: 2024/02/29 20:41:31 by gmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int main(void)
 	{
 		std::cout << "--> Try to access index 2 of the array: " << std::endl;
 		std::string elem = three_strs[2];
-		std::cout << "--> Success! Contents: " << elem << std::endl;
+		std::cout << "--> Success! Contents: '" << elem << "'" << std::endl;
 	}
 	catch (std::exception &e)
 	{
@@ -77,7 +77,7 @@ int main(void)
 	{
 		std::cout << "--> Try to access index 3 of the array: " << std::endl;
 		std::string  elem = three_strs[3];
-		std::cout << "--> Success! Contents: " << elem << std::endl;
+		std::cout << "--> Success! Contents: '" << elem << "'" << std::endl;
 	}
 	catch (std::exception &e)
 	{

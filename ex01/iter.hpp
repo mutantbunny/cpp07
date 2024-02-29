@@ -6,7 +6,7 @@
 /*   By: gmachado <gmachado@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 22:20:35 by gmachado          #+#    #+#             */
-/*   Updated: 2024/02/13 22:56:42 by gmachado         ###   ########.fr       */
+/*   Updated: 2024/02/29 19:44:01 by gmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 
 template <typename T>
-void iter(T *arr, const size_t len, void (*fn)(T elem))
+void iter(T *arr, const size_t len, void (*fn)(T& elem))
 {
 	for (size_t i = 0; i < len; ++i)
 		fn(arr[i]);
