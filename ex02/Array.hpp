@@ -6,7 +6,7 @@
 /*   By: gmachado <gmachado@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 23:47:04 by gmachado          #+#    #+#             */
-/*   Updated: 2024/02/14 03:17:14 by gmachado         ###   ########.fr       */
+/*   Updated: 2024/02/28 03:19:08 by gmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Array
 		T &operator[](unsigned int idx);
 		const T &operator[](unsigned int idx) const;
 
-		unsigned int size(void);
+		unsigned int size(void) const;
 };
 
 template <typename T>
@@ -94,6 +94,6 @@ const T &Array<T>::operator[](unsigned int idx) const
 }
 
 template <typename T>
-unsigned int Array<T>::size(void) { return m_size; }
+unsigned int Array<T>::size(void) const { return m_size; }
 
 #endif

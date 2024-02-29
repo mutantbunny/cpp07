@@ -6,7 +6,7 @@
 /*   By: gmachado <gmachado@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 01:50:44 by gmachado          #+#    #+#             */
-/*   Updated: 2024/02/14 03:30:31 by gmachado         ###   ########.fr       */
+/*   Updated: 2024/02/28 22:31:05 by gmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int main(void)
 	try
 	{
 		std::cout << "--> Try to access index 3 of the array: " << std::endl;
-		int elem = five_ints[3];
+		std::string  elem = three_strs[3];
 		std::cout << "--> Success! Contents: " << elem << std::endl;
 	}
 	catch (std::exception &e)
@@ -132,8 +132,28 @@ int main(void)
 			<< "previously empty int array: " << std::endl;
 		for (unsigned int i = 0; i < 5; ++i)
 		{
-			empty[i] = i;
+			empty[i] = i + 1;
 			int elem = empty[i];
+			std::cout << "--> Success! Index: " << i
+				<< ", Contents: " << elem << std::endl;
+		}
+	}
+	catch (std::exception &e)
+	{
+		std::cout << "--> Caught exception: " << e.what() << std::endl;
+	}
+
+	std::cout << "\n-> Create const Array with three elements using "
+		<< "the size parameter constructor.\n";
+
+	const Array<int> const_arr(3);
+
+	try
+	{
+		std::cout << "--> Access elements:" << std::endl;
+		for (unsigned int i = 0; i < 3; ++i)
+		{
+			int elem = const_arr[i];
 			std::cout << "--> Success! Index: " << i
 				<< ", Contents: " << elem << std::endl;
 		}
